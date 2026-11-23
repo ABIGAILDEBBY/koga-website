@@ -573,14 +573,14 @@ const polls=[
  {id:'meet',q:'When should Junior KOGA hold its first in-person meetup?',type:'Named poll',ends:'Closes Sun 29 Nov',opts:[['Sat 16 Jan 2027',58],['Sat 23 Jan 2027',73],['Sat 30 Jan 2027',31]]}
 ];
 const queue=[
- {id:'q1',name:'Belinda Tetteh',yr:'2013A',status:'complete',attended:'2010 to 2013',house:'Lamont',vouches:['Selasi Dorkenoo','Yvonne Amanor'],flags:[],ago:'2 days ago',prog:'General Arts'},
- {id:'q2',name:'Rita Akuetteh',yr:'2013A',status:'complete',attended:'2010 to 2013',vouches:['Mawuena Kpodo'],flags:[],ago:'1 day ago',prog:'Business'},
+ {id:'q1',name:'Narkie Tetteh',yr:'2013A',status:'complete',attended:'2010 to 2013',vouches:['Asha Banda','Bernice Amegatcher'],flags:[],ago:'2 days ago',prog:''},
+ {id:'q2',name:'Giftan Addo',yr:'2013A',status:'complete',attended:'2010 to 2013',vouches:['Verity Ampiah'],flags:[],ago:'1 day ago',prog:''},
  {id:'q3',name:'Rebecca Asamoah',yr:'2016',status:'left',attended:'2012 to 2014 (2 years)',vouches:['Founding verifier'],flags:['Did not complete: stayed 2 academic years, meets the 1 year rule'],ago:'3 days ago',prog:'Science'},
  {id:'q4',name:'Joyce Mensah',yr:'2013B',status:'complete',attended:'2010 to 2013',vouches:[],flags:['Possible duplicate: phone number matches an existing member, "Joyce Mensah-Ayer, 2013B"'],ago:'5 hours ago',prog:'Home Economics'},
  {id:'q5',name:'Gifty Kwarteng',yr:'2019',status:'left',attended:'Sept 2016 to May 2017 (under 1 year)',vouches:[],flags:['Stayed less than 1 academic year. Below the membership rule'],ago:'6 days ago',prog:'General Arts'}
 ];
 const audit=[
- ['07:41','Selasi Dorkenoo','vouched for','Belinda Tetteh (2013A)'],
+ ['07:41','Asha Banda','vouched for','Narkie Tetteh (2013A)'],
  ['07:12','System','flagged a duplicate','Joyce Mensah (2013B)'],
  ['Yesterday','Abigail Woolley','approved','Nana Ama Boateng (2013A)'],
  ['Yesterday','Mabel Kwao','declined with reason','Unknown request (2013B): "No classmate recognises her, invited to appeal"'],
@@ -710,7 +710,7 @@ V.join=()=>{
     <p class="muted" style="margin:0 0 16px">Two verified classmates from ${j.yr} confirm they know you. Pick anyone you remember, or skip and your year group verifiers will ask around.</p>
     <div class="search" style="margin-bottom:12px">${ic('search',18)}<input placeholder="Search ${j.yr} members"></div>
     <div class="card">${list.map(p=>{const on=j.vouch.includes(p.id);return `<div class="row" style="padding:8px 0">${av(p,40)}<div class="grow"><div class="b">${p.name} ${tick}</div><div class="small muted">${p.yr}${p.roles&&p.roles[0]?' · '+p.roles[0]:''}</div></div><button class="btn sm ${on?'':'ghost'}" onclick="toggleVouch('${p.id}')">${on?ic('check',16,2.6)+' Asked':'Ask'}</button></div>`}).join('')}</div>
-    <div class="card flat small"><b>${ic('shield',15)} Year group verifiers for ${j.yr}</b><div class="muted" style="margin-top:4px">Selasi Dorkenoo and Abigail Woolley. They get your request either way.</div></div>`;
+    <div class="card flat small"><b>${ic('shield',15)} Year group verifiers for ${j.yr}</b><div class="muted" style="margin-top:4px">Asha Banda and Abigail Woolley. They get your request either way.</div></div>`;
   }
   if(st===4){
     body=`<h2 class="serif" style="margin:0 0 6px;font-size:24px">Your privacy, your call</h2>
@@ -1095,7 +1095,7 @@ V.card=()=>({title:'Membership card',back:true,html:`<div class="fade-in" style=
   <div class="card small" style="margin-top:14px"><b>What the card does</b><div class="muted" style="margin-top:6px;line-height:1.6">Check in at events in one scan. Prove membership for KOGA discounts at member businesses. Works offline once opened.</div></div>
   <button class="btn soft block" onclick="toast('Added to your phone wallet')">Add to phone wallet</button></div>`});
 V.notifications=()=>{S.notifRead=true;return {title:'Notifications',back:true,right:'',html:`<div class="fade-in" style="padding-top:6px">${[
-  ['shield','Rita Akuetteh (2013A) asked you to vouch for her','2h','admin'],['heart','Centenary sickbay: new update posted','5h','project/sickbay'],['vote','Executive election: voting opens Mon 30 Nov','1d','voice'],['cal','Health Walk is in 12 days. Your QR ticket is ready','1d','event/walk'],['flower','Yvonne Amanor welcomed a baby girl','2d','welfare'],['briefcase','New job from Mabel Kwao: Graduate Trainee','2d','jobs']
+  ['shield','Giftan Addo (2013A) asked you to vouch for her','2h','admin'],['heart','Centenary sickbay: new update posted','5h','project/sickbay'],['vote','Executive election: voting opens Mon 30 Nov','1d','voice'],['cal','Health Walk is in 12 days. Your QR ticket is ready','1d','event/walk'],['flower','Yvonne Amanor welcomed a baby girl','2d','welfare'],['briefcase','New job from Mabel Kwao: Graduate Trainee','2d','jobs']
 ].map(([i,t,a,r])=>`<div class="card" style="padding:12px;cursor:pointer" onclick="go('${r}')"><div class="row"><span class="ic" style="width:38px;height:38px;border-radius:12px;background:var(--gold-soft);display:grid;place-items:center;color:var(--wine);flex-shrink:0">${ic(i,18)}</span><div class="grow small">${t}<div class="tiny muted">${a}</div></div></div></div>`).join('')}</div>`}};
 V.jobs=()=>({title:'Jobs and mentoring',sub:'Old girls opening doors for each other',back:true,html:`<div class="fade-in">
   <div class="seg" style="margin:6px 0 12px"><button class="on">All</button><button>Jobs</button><button>Mentoring</button><button>Support</button></div>
@@ -1114,7 +1114,7 @@ V.admin=()=>{
   let body='';
   if(tab==='queue'){
     body=q.length?q.map(x=>{const n=x.vouches.length;const flag=x.flags.length;const bad=x.flags.some(f=>f.includes('Below')||f.includes('duplicate'));
-      return `<div class="card"><div class="row">${av({name:x.name,hue:'#6B1530'},44)}<div class="grow"><b>${x.name}</b><div class="small muted">${x.yr} · ${x.prog} · ${x.ago}</div></div><span class="chip ${n>=2?'ok':'warn'}">${n}/2 vouches</span></div>
+      return `<div class="card"><div class="row">${av({name:x.name,hue:'#6B1530'},44)}<div class="grow"><b>${x.name}</b><div class="small muted">${x.yr}${x.prog?' · '+x.prog:''} · ${x.ago}</div></div><span class="chip ${n>=2?'ok':'warn'}">${n}/2 vouches</span></div>
       <div class="small" style="margin-top:10px;line-height:1.6"><span class="muted">Time at Krobo:</span> ${x.status==='left'?'<span class="chip wine" style="padding:1px 8px">Did not complete</span> ':''}${x.attended}<br><span class="muted">Vouched by:</span> ${n?x.vouches.join(', '):'Nobody yet'}</div>
       ${flag?x.flags.map(f=>`<div class="small" style="margin-top:8px;padding:8px 10px;border-radius:10px;background:${f.includes('meets')?'var(--ok-soft)':'var(--warn-soft)'};color:${f.includes('meets')?'var(--ok)':'var(--warn)'}">${ic(f.includes('meets')?'check':'flag',14,2.2)} ${f}</div>`).join(''):''}
       <div class="row" style="gap:8px;margin-top:12px">${bad?`<button class="btn soft sm" onclick="toast('Opens both records side by side to merge')">Review</button>`:''}<button class="btn sm ${n>=2?'':'soft'}" onclick="decide('${x.id}','approved')">${ic('check',15,2.6,n>=2?'#fff':'currentColor')} Approve</button><button class="btn danger sm" onclick="declineSheet('${x.id}')">Decline</button><button class="btn ghost sm" style="margin-left:auto" onclick="toast('Reminder sent to 2013A classmates')">Nudge</button></div></div>`}).join(''):`<div class="empty">${ic('check',32,2,'var(--ok)')}<div class="b" style="margin-top:8px">Queue clear</div><div class="small">Nice work. Every request handled within 7 days.</div></div>`;
