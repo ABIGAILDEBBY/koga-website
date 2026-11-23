@@ -26,3 +26,7 @@ Use the **Prototype tour** button in the bottom corner to jump to any page.
 | `index.html` | The whole site in one self-contained page |
 | `og-image.jpg` | Link preview image for WhatsApp and social media (1200 x 630) |
 | `favicon*.png`, `favicon.ico`, `apple-touch-icon.png` | Browser and phone icons |
+
+## Sharing the link
+
+Share `https://abigaildebby.github.io/koga-website/` in WhatsApp and the KOGA preview card appears. If an old preview sticks, add `?v=2` to the end of the link to make WhatsApp fetch a fresh one.
