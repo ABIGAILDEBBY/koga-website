@@ -16,7 +16,7 @@ Use the **Prototype tour** button in the bottom corner to jump to any page.
 ## Please note
 
 - This is a design prototype and nothing is saved. Event dates, venues and project facts come from KOGA announcements. People in the members' area, money figures and receipts are **sample content** and are labelled as such.
-- The crest is the Krobo Girls' crest from Wikimedia Commons (File:Krobo_Girls_Crest.png, CC0). The Krobo Girls' 100 logo is cropped from a Centenary flyer until the official master file is available.
+- The crest is the Krobo Girls' crest from Wikimedia Commons (File:Krobo_Girls_Crest.png, CC0), with the website watermark that was printed across it cleaned off. An official file from the school would be even better. The Krobo Girls' 100 logo is cropped from a Centenary flyer until the official master file is available.
 - The page asks search engines not to index it.
 
 ## Files
@@ -24,7 +24,7 @@ Use the **Prototype tour** button in the bottom corner to jump to any page.
 | File | Purpose |
 |---|---|
 | `index.html` | The whole site in one self-contained page |
-| `koga-preview.jpg` | Link preview image for WhatsApp and social media (1200 x 630) |
+| `koga-link-preview.jpg` | Link preview image for WhatsApp and social media (1200 x 630) |
 | `favicon*.png`, `favicon.ico`, `apple-touch-icon.png` | Browser and phone icons |
 
 ## Sharing the link
