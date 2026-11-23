@@ -525,6 +525,13 @@ const tick='<span class="badge-verified" title="Verified by classmates">'+ic('ch
 const HUES=['#283090','#6B1530','#1F6F6A','#8A5A10','#3E4AA8','#A0303D','#4B3A8F','#2E6B3F'];
 const people=[
  {id:'abigail',name:'Abigail Woolley',yr:'2013A',town:'Accra',country:'Ghana',job:'Social media lead, 2013A',emp:'Volunteer',ind:'Media & Creative',help:['Social media','Content & design','Event coverage'],roles:['2013A Social Media Manager','Junior KOGA Executive'],prog:'General Arts',events:9,committees:3,projects:2,me:true},
+ {id:'sandra',name:'Sandra Antwiwaa',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
+ {id:'verity',name:'Verity Ampiah',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
+ {id:'danquah',name:'Ms Danquah',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
+ {id:'bernice',name:'Bernice Amegatcher',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
+ {id:'asha',name:'Asha Banda',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
+ {id:'omari',name:'Abigail Omari',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
+ {id:'loretta',name:'Loretta Akuffo',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
  {id:'akosua',name:'Akosua Tetteh-Narh',yr:'2005',town:'Tema',country:'Ghana',job:'Civil Engineer',emp:'Coastal Cement Works',ind:'Construction & Building',help:['Sponsorship contacts','Mentoring','Building projects'],roles:['Centenary Projects Committee'],prog:'Science',events:14,committees:2,projects:3},
  {id:'naa',name:'Naa Dedei Ofori',yr:'2010',town:'Accra',country:'Ghana',job:'Makeup Artist',emp:'Dedei Glam Studio',ind:'Beauty & Fashion',help:['Bridal makeup','Event styling'],hire:true,biz:'Dedei Glam Studio',prog:'Visual Arts',events:6,committees:1,projects:1},
  {id:'mabel',name:'Mabel Kwao',yr:'2013B',town:'Accra',country:'Ghana',job:'HR Business Partner',emp:'Coastline Bank',ind:'Banking & Finance',help:['CV review','Mentoring','Job referrals'],prog:'Business',events:11,committees:2,projects:1},
@@ -537,14 +544,7 @@ const people=[
  {id:'yvonne',name:'Yvonne Amanor',yr:'2013A',town:'Kumasi',country:'Ghana',job:'Pharmacist',emp:'Kumasi Community Pharmacy',ind:'Health',help:['Health screening','Pharmacy supplies'],prog:'Science',events:5,committees:1,projects:1},
  {id:'dzifa',name:'Dzifa Agbeko',yr:'2020',town:'Koforidua',country:'Ghana',job:'Events Planner',emp:'Dzi Events',ind:'Food & Events',help:['Event planning','Decor'],hire:true,biz:'Dzi Events',prog:'Home Economics',events:7,committees:2,projects:1},
  {id:'efua',name:'Efua Lartey',yr:'2002',town:'Houston',country:'USA',job:'Nurse Manager',emp:'Gulf Coast Health',ind:'Health',help:['Diaspora fundraising','Nursing careers'],roles:['KOGA US member'],prog:'Science',events:5,committees:1,projects:2},
- {id:'mawuli',name:'Mawuena Kpodo',yr:'2013A',town:'Accra',country:'Ghana',job:'Procurement Officer',emp:'Volta Building Supplies',ind:'Construction & Building',help:['Sponsorship contacts','Procurement'],prog:'Business',events:6,committees:1,projects:1},
- {id:'sandra',name:'Sandra Antwiwaa',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
- {id:'verity',name:'Verity Ampiah',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
- {id:'danquah',name:'Ms Danquah',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
- {id:'bernice',name:'Bernice Amegatcher',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
- {id:'asha',name:'Asha Banda',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
- {id:'omari',name:'Abigail Omari',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0},
- {id:'loretta',name:'Loretta Akuffo',yr:'2013A',town:'Location private',country:'Ghana',job:'Member',emp:'',ind:'Other',help:[],prog:'',events:0,committees:0,projects:0}
+ {id:'mawuli',name:'Mawuena Kpodo',yr:'2013A',town:'Accra',country:'Ghana',job:'Procurement Officer',emp:'Volta Building Supplies',ind:'Construction & Building',help:['Sponsorship contacts','Procurement'],prog:'Business',events:6,committees:1,projects:1}
 ];
 people.forEach((p,i)=>p.hue=HUES[i%HUES.length]);
 const byId=id=>people.find(p=>p.id===id);
