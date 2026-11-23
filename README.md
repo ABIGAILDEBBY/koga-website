@@ -1,6 +1,6 @@
 # Krobo Old Girls Association website (prototype)
 
-A clickable prototype of a website for the Krobo Old Girls Association (KOGA), the alumnae of Krobo Girls' Senior High School, Odumase-Krobo, Ghana.
+A clickable prototype of a website for the Krobo Old Girls Association (KOGA), the alumnae of Krobo Girls' Presbyterian Senior High School, Odumase-Krobo, Ghana.
 
 **Live preview:** https://abigaildebby.github.io/koga-website/
 
@@ -15,8 +15,8 @@ Use the **Prototype tour** button in the bottom corner to jump to any page.
 
 ## Please note
 
-- This is a design prototype. All names, figures and receipts are **sample content**, and nothing is saved.
-- The KOGA crest and the Krobo Girls' 100 logo are redrawn recreations for the prototype, not the official master artwork.
+- This is a design prototype and nothing is saved. Event dates, venues and project facts come from KOGA announcements. People in the members' area, money figures and receipts are **sample content** and are labelled as such.
+- The KOGA crest and the Krobo Girls' 100 logo are the original artwork, cropped and shown at sizes where they stay sharp. The 100 logo is cropped from a Centenary flyer until the official master file is available.
 - The page asks search engines not to index it.
 
 ## Files
@@ -29,4 +29,4 @@ Use the **Prototype tour** button in the bottom corner to jump to any page.
 
 ## Sharing the link
 
-Share `https://abigaildebby.github.io/koga-website/` in WhatsApp and the KOGA preview card appears. If an old preview sticks, add `?v=2` to the end of the link to make WhatsApp fetch a fresh one.
+Share `https://abigaildebby.github.io/koga-website/` in WhatsApp and the KOGA preview card appears. If an old preview sticks, add `?v=3` to the end of the link to make WhatsApp fetch a fresh one.
