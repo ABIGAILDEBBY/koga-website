@@ -139,7 +139,7 @@ Every push runs [Website checks](https://github.com/ABIGAILDEBBY/koga-website/ac
 - **Design and product:** Abigail Woolley, Junior KOGA, 2013A
 - **Crest:** Krobo Girls' crest from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Krobo_Girls_Crest.png) (CC0), with a website watermark removed. To be replaced with the school's official file.
 - **Centenary logo:** cropped from an official Centenary flyer until the master file is available.
-- **Fonts:** [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) and [DM Sans](https://fonts.google.com/specimen/DM+Sans) from Google Fonts.
+- **Fonts:** [Source Serif 4](https://fonts.google.com/specimen/Source+Serif+4) and [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3) by Adobe, open source (SIL Open Font License), served by Google Fonts.
 
 The KOGA name, crest and Centenary branding belong to the Krobo Old Girls Association and Krobo Girls' Presbyterian Senior High School.
 
