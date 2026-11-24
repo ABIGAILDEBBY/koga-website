@@ -81,8 +81,7 @@ Most members open links from WhatsApp, so every page is designed for a phone scr
 </table>
 
 <div align="center">
-  <img src="docs/screenshots/mobile.jpg" alt="The website on a phone" width="85%"><br>
-  <sub><b>On the phone</b></sub>
+  <img src="docs/screenshots/mobile.png" alt="The homepage, members' dashboard and directory shown on phones" width="100%">
 </div>
 
 ## Project status
