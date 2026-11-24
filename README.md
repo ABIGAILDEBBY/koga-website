@@ -81,7 +81,9 @@ Most members open links from WhatsApp, so every page is designed for a phone scr
 </table>
 
 <div align="center">
-  <img src="docs/screenshots/mobile.png" alt="The homepage, members' dashboard and directory shown on phones" width="100%">
+  <img src="docs/screenshots/mobile.png" alt="The homepage, members' dashboard and directory shown on phones" width="100%"><br><br>
+  <img src="docs/screenshots/mobile-members.png" alt="Membership card, a member profile with Request intro and WhatsApp buttons, and notifications on phones" width="100%"><br><br>
+  <img src="docs/screenshots/mobile-community.png" alt="Year group page, jobs and mentoring, and celebrate and support on phones" width="100%">
 </div>
 
 ## Project status
