@@ -28,7 +28,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="theme-color" content="#222365">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&family=Source+Sans+3:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Source+Sans+3:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <style>
 /* Layout: desktop-first school/alumni site. Full-bleed bands, 1200px content column, members' area as a sidebar app behind login. */
 :root{
@@ -53,7 +53,7 @@
   --gold:var(--bronze); --gold-2:var(--champagne); --gold-soft:var(--cream); --wine:var(--plum);
   --ink-c:var(--text);
 
-  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --serif:'Marcellus',Georgia,'Times New Roman',serif;
   --sans:'Source Sans 3',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --s-hero:clamp(40px,5.2vw,68px); --s-h2:clamp(30px,3.4vw,44px); --s-h3:22px; --s-body:17px; --s-small:15px; --s-eyebrow:12px;
   --r:18px; --shadow:0 1px 2px rgba(34,35,101,.06),0 10px 30px rgba(34,35,101,.08); --shadow-lg:0 30px 60px -20px rgba(22,22,74,.35);
@@ -453,6 +453,10 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;margin:0;text
 }
 
 .prog .p span.muted{color:var(--muted)}
+
+/* Marcellus has one weight and no italic: keep it as drawn, never faked bold or slanted */
+h1,h2,h3,.serif,[style*="var(--serif)"],.brand .n,.tile b,.lcard b,.count b,.edate b,.ring b,.hero .meta b,.frame .stamp b,.pillar .n,.ph,.cent::after{font-weight:400;font-synthesis:none}
+h1 em,h2 em,h3 em{font-style:normal}
 </style>
 </head>
 <body>
