@@ -1,0 +1,51 @@
+# A workflow is a recipe GitHub follows automatically.
+# This one checks the KOGA website every time it changes,
+# then confirms the live site is up.
+
+name: Website checks          # the name you see in the Actions tab
+
+# "on" says WHEN the workflow runs.
+on:
+  push:
+    branches: [main]          # every time something is pushed to main
+  pull_request:               # every time someone proposes a change
+  workflow_dispatch:          # adds a "Run workflow" button so you can run it by hand
+
+# A workflow is made of jobs. Each job runs on a fresh computer GitHub lends us.
+jobs:
+  check:
+    name: Check the site files
+    runs-on: ubuntu-latest    # the kind of computer (Linux)
+    steps:                    # steps run one after another, top to bottom
+      - name: Get a copy of the repo
+        uses: actions/checkout@v4      # a ready-made step someone else wrote
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the checks
+        run: python3 .github/scripts/check_site.py   # "run" means type this command
+
+  live:
+    name: Confirm the live site is up
+    needs: check              # only start after the "check" job passes
+    if: github.event_name != 'pull_request'   # a proposal isn't live yet, so skip it
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for GitHub Pages, then load the site
+        run: |
+          # GitHub Pages takes a minute or two to publish, so try for up to 5 minutes.
+          url="https://abigaildebby.github.io/koga-website/"
+          for i in $(seq 1 20); do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+            echo "Try $i: $url answered $code"
+            if [ "$code" = "200" ]; then
+              echo "✅ The live site is up: $url" >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "❌ The live site did not answer. Check Settings, then Pages." >> "$GITHUB_STEP_SUMMARY"
+          exit 1
